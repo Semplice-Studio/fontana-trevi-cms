@@ -1,0 +1,28 @@
+# Production overrides - use with: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+  php:
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    environment:
+      - PHP_OPCACHE_VALIDATE_TIMESTAMPS=0
+
+  nginx:
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  db:
+    restart: unless-stopped
+    ports: []  # Don't expose database port in production
+    deploy:
+      resources:
+        limits:
+          memory: 1G
