@@ -1,12 +1,14 @@
-dateModified: 1768576831
+dateModified: 1768578682
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    4ced0c63-4258-4a86-82c8-474b1efeb74f: Pagina # Pagina
     8f7f8686-4145-4205-ace1-e67e6e7f91f5: fonta-trevi # fonta-trevi
     9c5d5f1c-302b-432d-8889-3965d508b194: fonta-trevi # fonta-trevi
+    fd6020f8-2e21-4f1d-af40-1c74e81c3000: 'Public Schema' # Public Schema
 system:
   edition: solo
   live: true

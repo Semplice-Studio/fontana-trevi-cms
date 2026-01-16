@@ -1,0 +1,53 @@
+color: null
+description: null
+fieldLayouts:
+  a55a4b0f-5bae-4ec3-80b2-4d28994730fb:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-01-16T15:49:33+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e2454871-e445-4004-8122-a69a35bc5d1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4e712e07-92fb-4d0c-a7ef-ee31d2784a9b
+        userCondition: null
+handle: pagina
+hasTitleField: true
+icon: file-lines
+name: Pagina
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
