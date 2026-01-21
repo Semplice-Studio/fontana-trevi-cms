@@ -1,0 +1,70 @@
+color: sky
+description: null
+fieldLayouts:
+  86ea3328-3d9e-49b3-bebd-48e074338644:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2026-01-21T11:36:15+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 31ff07db-9032-449a-a421-83bdd6c5a652
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-21T13:59:51+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 97c36746-feb8-4bc1-8b32-3e3c3259b31b # Blocchi
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 17bd8943-7c32-4e2e-a7ea-7199a5dde208
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8e7da487-67eb-4dea-ba73-e13d550187ef
+        userCondition: null
+handle: homepage
+hasTitleField: true
+icon: house
+name: Homepage
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

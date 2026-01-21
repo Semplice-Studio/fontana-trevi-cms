@@ -1,8 +1,0 @@
-baseUrl: $PRIMARY_SITE_URL
-handle: default
-hasUrls: true
-language: en
-name: fonta-trevi
-primary: true
-siteGroup: 9c5d5f1c-302b-432d-8889-3965d508b194 # fonta-trevi
-sortOrder: 1

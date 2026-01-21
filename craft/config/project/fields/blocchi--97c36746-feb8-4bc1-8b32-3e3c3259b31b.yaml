@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: blocchi
+instructions: null
+name: Blocchi
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 5a26f1f1-6170-408e-8b45-bcbf7104e0cb # Hero
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

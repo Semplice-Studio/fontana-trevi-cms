@@ -1,0 +1,96 @@
+columnSuffix: null
+handle: iconaAvvisoManutenzione
+instructions: null
+name: 'Icona Avviso Manutenzione'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - speciale
+        -
+          - value
+          - speciale
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - orologio
+        -
+          - value
+          - orologio
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - ticket
+        -
+          - value
+          - ticket
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - attenzione
+        -
+          - value
+          - attenzione
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - divieto
+        -
+          - value
+          - divieto
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

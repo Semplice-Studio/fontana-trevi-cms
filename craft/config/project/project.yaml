@@ -1,20 +1,66 @@
-dateModified: 1768578682
+dateModified: 1769011361
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
 meta:
   __names__:
-    4ced0c63-4258-4a86-82c8-474b1efeb74f: Pagina # Pagina
-    8f7f8686-4145-4205-ace1-e67e6e7f91f5: fonta-trevi # fonta-trevi
+    2fbf1bea-4c0f-4faf-b4df-d7c7faf27656: 'Video Background' # Video Background
+    3e7c6349-ae7b-4066-bcb6-380ea09b4f86: 'Seo Description' # Seo Description
+    5a26f1f1-6170-408e-8b45-bcbf7104e0cb: Hero # Hero
+    5cdd6615-0e0c-4415-bc3f-302dc52b1104: Homepage # Homepage
+    7a220bd6-7d45-4cd3-9d88-7f3e583ed063: 'Link CTA' # Link CTA
+    8f7f8686-4145-4205-ace1-e67e6e7f91f5: 'Fontana Trevi - IT' # Fontana Trevi - IT
     9c5d5f1c-302b-432d-8889-3965d508b194: fonta-trevi # fonta-trevi
+    97c36746-feb8-4bc1-8b32-3e3c3259b31b: Blocchi # Blocchi
+    4033fbd4-5d65-4515-96fd-2b54697b307d: 'Titolo Seconda Riga' # Titolo Seconda Riga
+    45952d02-8da9-45dc-81df-be4fea47ce47: Homepage # Homepage
+    68308c87-e785-41d2-b15b-58aefafa2c8f: 'Seo Image' # Seo Image
+    85867d07-76c5-49c6-b699-3f42a9ad4cc8: 'Seo Title' # Seo Title
+    46188251-46ab-4519-916a-28b77f5aabbe: Sottotitolo # Sottotitolo
+    aeb11d3b-b8f3-4a5a-b89e-309cead42890: 'Titolo Prima Riga' # Titolo Prima Riga
+    c0c8eabb-1d94-449c-b621-1252e3e75ea4: Video # Video
+    de834319-7a42-478c-9f63-192de7436f20: 'Testo Avviso Manutenzione' # Testo Avviso Manutenzione
+    e10b9023-318a-4ed3-98ca-c905871af2b4: 'Sottotitolo Seconda Riga' # Sottotitolo Seconda Riga
+    f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4: Immagini # Immagini
     fd6020f8-2e21-4f1d-af40-1c74e81c3000: 'Public Schema' # Public Schema
+    ff59314d-d88c-469c-bb11-d18989180be0: 'Icona Avviso Manutenzione' # Icona Avviso Manutenzione
+sites:
+  8f7f8686-4145-4205-ace1-e67e6e7f91f5: # Fontana Trevi - IT
+    baseUrl: $PRIMARY_SITE_URL
+    enabled: true
+    handle: default
+    hasUrls: true
+    language: it-IT
+    name: 'Fontana Trevi - IT'
+    primary: true
+    siteGroup: 9c5d5f1c-302b-432d-8889-3965d508b194 # fonta-trevi
+    sortOrder: 1
+  b2c3d4e5-f678-90ab-cdef-123456789012:
+    baseUrl: $PRIMARY_SITE_URL/en
+    enabled: 'true'
+    handle: en
+    hasUrls: true
+    language: en-GB
+    name: 'Fontana Trevi - EN'
+    primary: false
+    siteGroup: 9c5d5f1c-302b-432d-8889-3965d508b194 # fonta-trevi
+    sortOrder: 2
 system:
-  edition: solo
+  edition: pro
   live: true
   name: fonta-trevi
+  retryDuration: null
   schemaVersion: 5.8.0.3
-  timeZone: America/Los_Angeles
+  timeZone: Europe/Rome
 users:
   allowPublicRegistration: false
   defaultGroup: null

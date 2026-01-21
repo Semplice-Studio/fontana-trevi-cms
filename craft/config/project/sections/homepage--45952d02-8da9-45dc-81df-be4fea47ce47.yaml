@@ -1,0 +1,26 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 5cdd6615-0e0c-4415-bc3f-302dc52b1104 # Homepage
+handle: homepage
+maxAuthors: 1
+name: Homepage
+previewTargets:
+  -
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  8f7f8686-4145-4205-ace1-e67e6e7f91f5: # Fontana Trevi - IT
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+  b2c3d4e5-f678-90ab-cdef-123456789012:
+    enabledByDefault: true
+    hasUrls: true
+    template: null
+    uriFormat: __home__
+type: single

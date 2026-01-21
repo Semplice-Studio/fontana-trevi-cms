@@ -1,2 +1,12 @@
 isPublic: true
 name: 'Public Schema'
+scope:
+  - 'sites.8f7f8686-4145-4205-ace1-e67e6e7f91f5:read' # Fontana Trevi - IT
+  - 'sites.b2c3d4e5-f678-90ab-cdef-123456789012:read'
+  - 'elements.drafts:read'
+  - 'elements.revisions:read'
+  - 'elements.inactive:read'
+  - 'sections.45952d02-8da9-45dc-81df-be4fea47ce47:read' # Homepage
+  - 'nestedentryfields.97c36746-feb8-4bc1-8b32-3e3c3259b31b:read' # Blocchi
+  - 'volumes.f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4:read' # Immagini
+  - 'volumes.c0c8eabb-1d94-449c-b621-1252e3e75ea4:read' # Video
