@@ -360,8 +360,8 @@ docker compose ps  # db should show "healthy"
 make fix-permissions
 
 # Or manually
-docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
-docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
+sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources
+sudo chmod -R 777 craft/vendor craft/storage craft/web/cpresources
 ```
 
 ### Reset admin password

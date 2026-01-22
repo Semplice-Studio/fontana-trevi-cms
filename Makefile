@@ -61,7 +61,7 @@ fix-permissions:
 	mkdir -p craft/vendor craft/storage craft/web/cpresources
 	@echo "Fixing permissions (may require sudo password)..."
 	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources
-	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources
+	sudo chmod -R 777 craft/vendor craft/storage craft/web/cpresources
 	@echo "Permissions fixed!"
 
 # Generate Craft security key (needed on Linux servers where permissions block the craft command)
@@ -77,7 +77,7 @@ install:
 	mkdir -p craft/vendor craft/storage craft/web/cpresources
 	@echo "Fixing permissions..."
 	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources || true
-	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources || true
+	sudo chmod -R 777 craft/vendor craft/storage craft/web/cpresources || true
 	@echo "Installing Composer dependencies..."
 	docker compose exec -u root php composer install --no-interaction
 	@echo "Generating security key..."
@@ -105,7 +105,7 @@ setup:
 	@echo "4. Creating required directories and fixing permissions..."
 	mkdir -p craft/vendor craft/storage craft/web/cpresources
 	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources || true
-	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources || true
+	sudo chmod -R 777 craft/vendor craft/storage craft/web/cpresources || true
 	@echo ""
 	@echo "5. Installing Composer dependencies..."
 	docker compose exec -u root php composer install --no-interaction
