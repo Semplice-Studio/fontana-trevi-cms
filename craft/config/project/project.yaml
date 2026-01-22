@@ -1,4 +1,4 @@
-dateModified: 1769081621
+dateModified: 1769099071
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
@@ -15,12 +15,14 @@ meta:
   __names__:
     0e998ccf-b819-41f0-88c2-01bfa99e19e2: Orari # Orari
     2fbf1bea-4c0f-4faf-b4df-d7c7faf27656: 'Video Background' # Video Background
+    3a97014c-fc28-4af7-b816-5428f37b05c5: Simple # Simple
     3e7c6349-ae7b-4066-bcb6-380ea09b4f86: 'Seo Description' # Seo Description
     5a26f1f1-6170-408e-8b45-bcbf7104e0cb: Hero # Hero
     5cdd6615-0e0c-4415-bc3f-302dc52b1104: Homepage # Homepage
     7a220bd6-7d45-4cd3-9d88-7f3e583ed063: 'Link CTA' # Link CTA
     8f7f8686-4145-4205-ace1-e67e6e7f91f5: 'Fontana Trevi - IT' # Fontana Trevi - IT
     9c5d5f1c-302b-432d-8889-3965d508b194: fonta-trevi # fonta-trevi
+    53fb3da5-7c03-494f-bf94-ae71f1ac40d0: 'Blocco di Testo' # Blocco di Testo
     97c36746-feb8-4bc1-8b32-3e3c3259b31b: Blocchi # Blocchi
     3673fc41-a579-4121-81bd-d598f59eca0a: 'Orario Ultimo Ingresso' # Orario Ultimo Ingresso
     4033fbd4-5d65-4515-96fd-2b54697b307d: 'Titolo Seconda Riga' # Titolo Seconda Riga
@@ -37,6 +39,11 @@ meta:
     f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4: Immagini # Immagini
     fd6020f8-2e21-4f1d-af40-1c74e81c3000: 'Public Schema' # Public Schema
     ff59314d-d88c-469c-bb11-d18989180be0: 'Icona Avviso Manutenzione' # Icona Avviso Manutenzione
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 sites:
   8f7f8686-4145-4205-ace1-e67e6e7f91f5: # Fontana Trevi - IT
     baseUrl: $PRIMARY_SITE_URL

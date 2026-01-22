@@ -1,0 +1,23 @@
+headingLevels:
+  - 2
+  - 3
+  - 4
+json: '@config/ckeditor/Simple.json'
+name: Simple
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - underline
+  - strikethrough
+  - '|'
+  - link
+  - '|'
+  - bulletedList
+  - numberedList
+  - '|'
+  - blockQuote
+  - '|'
+  - undo
+  - redo
