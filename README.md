@@ -86,9 +86,10 @@ docker compose logs -f
 Or using Make (macOS/Linux):
 
 ```bash
-make up      # Start containers
-make down    # Stop containers
-make logs    # View logs
+make up              # Start containers
+make down            # Stop containers
+make logs            # View logs
+make fix-permissions # Fix vendor/storage permissions (useful on Linux servers)
 ```
 
 ### Common Tasks
@@ -289,6 +290,8 @@ Copy `.env.example` to `.env` and configure:
 
 ### On Ubuntu VPS
 
+> **Nota:** Su nuove VM Ubuntu potrebbe essere necessario installare Docker Compose V2 dai repository ufficiali Docker. Vedi [docs/UBUNTU_VM_DOCKER_SETUP.md](docs/UBUNTU_VM_DOCKER_SETUP.md) per le istruzioni.
+
 ```bash
 # 1. Clone and configure
 git clone <repository-url>
@@ -353,8 +356,12 @@ docker compose ps  # db should show "healthy"
 ### Permission issues
 
 ```bash
-docker compose exec php chown -R www-data:www-data /var/www/html/storage
-docker compose exec php chmod -R 775 /var/www/html/storage
+# Using Make (recommended)
+make fix-permissions
+
+# Or manually
+docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
+docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
 ```
 
 ### Reset admin password

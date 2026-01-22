@@ -1,4 +1,4 @@
-.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed
+.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed fix-permissions
 
 # Default target
 help:
@@ -18,6 +18,7 @@ help:
 	@echo "  make backup    - Backup database with timestamp"
 	@echo "  make db-export - Export database to seed.sql (for sharing)"
 	@echo "  make db-seed   - Import seed.sql (for new developers)"
+	@echo "  make fix-permissions - Fix vendor folder permissions"
 	@echo ""
 
 # Docker commands
@@ -53,8 +54,16 @@ composer:
 craft:
 	docker compose exec php php craft $(c)
 
+# Fix permissions for vendor folder (needed on some Linux servers)
+fix-permissions:
+	@echo "Fixing permissions..."
+	docker compose exec -u root php mkdir -p /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
+	@echo "Permissions fixed!"
+
 # Fresh installation (creates empty database - use for new projects)
-install:
+install: fix-permissions
 	@echo "Installing Composer dependencies..."
 	docker compose exec php composer install
 	@echo ""
@@ -78,16 +87,21 @@ setup:
 	@echo "3. Waiting for database to be ready..."
 	sleep 15
 	@echo ""
-	@echo "4. Installing Composer dependencies..."
+	@echo "4. Fixing permissions..."
+	docker compose exec -u root php mkdir -p /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
+	@echo ""
+	@echo "5. Installing Composer dependencies..."
 	docker compose exec php composer install
 	@echo ""
-	@echo "5. Generating security key..."
+	@echo "6. Generating security key..."
 	docker compose exec php php craft setup/security-key
 	@echo ""
-	@echo "6. Importing seed database..."
+	@echo "7. Importing seed database..."
 	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
 	@echo ""
-	@echo "7. Applying project config..."
+	@echo "8. Applying project config..."
 	docker compose exec php php craft project-config/apply --force
 	@echo ""
 	@echo "=== Setup Complete! ==="
