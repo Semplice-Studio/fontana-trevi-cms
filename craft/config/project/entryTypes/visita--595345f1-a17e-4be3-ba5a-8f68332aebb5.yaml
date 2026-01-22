@@ -1,0 +1,57 @@
+color: null
+description: null
+fieldLayouts:
+  86d80399-4779-43f4-8d37-90f469bd72f4:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-22T11:33:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Titolo
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d69862f2-0a28-456d-8a2d-d4bd68742237
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-22T11:33:27+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 46188251-46ab-4519-916a-28b77f5aabbe # Sottotitolo
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bf8b14fd-f17b-49b0-9f54-2c1de26ac35b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 63e947e7-0dc1-43e2-9dd7-66f8eacc8bec
+        userCondition: null
+handle: visita
+hasTitleField: false
+icon: null
+name: Visita
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

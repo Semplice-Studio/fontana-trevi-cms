@@ -1,0 +1,80 @@
+columnSuffix: null
+handle: orari
+instructions: null
+name: Orari
+searchable: false
+settings:
+  addRowLabel: 'Add a row'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Giorno
+            -
+              - handle
+              - giorno
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - Apertura
+            -
+              - handle
+              - apertura
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col4
+        -
+          __assoc__:
+            -
+              - heading
+              - Chiusura
+            -
+              - handle
+              - chiusura
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col5
+        -
+          __assoc__:
+            -
+              - heading
+              - Eccezione
+            -
+              - handle
+              - eccezione
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults: null
+  maxRows: 7
+  minRows: 7
+  staticRows: false
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Table

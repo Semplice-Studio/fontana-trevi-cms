@@ -1,4 +1,4 @@
-.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup
+.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed
 
 # Default target
 help:
@@ -15,7 +15,9 @@ help:
 	@echo "  make craft     - Run Craft CLI (use: make craft c='migrate/all')"
 	@echo "  make install   - Fresh Craft installation"
 	@echo "  make setup     - Initial project setup"
-	@echo "  make backup    - Backup database"
+	@echo "  make backup    - Backup database with timestamp"
+	@echo "  make db-export - Export database to seed.sql (for sharing)"
+	@echo "  make db-seed   - Import seed.sql (for new developers)"
 	@echo ""
 
 # Docker commands
@@ -77,6 +79,18 @@ backup:
 	@mkdir -p backups
 	docker compose exec db mysqldump -u craft -pcraft craft > backups/backup-$$(date +%Y%m%d-%H%M%S).sql
 	@echo "Backup created in backups/"
+
+# Export database to seed file (run this to update the shared seed)
+db-export:
+	@echo "Exporting database to database/seed.sql..."
+	docker compose exec db mysqldump -u craft -pcraft --routines --triggers craft > database/seed.sql
+	@echo "Database exported! Commit database/seed.sql to share with team."
+
+# Import seed database (for new developers)
+db-seed:
+	@echo "Importing seed database..."
+	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
+	@echo "Seed imported! Run 'make craft c=\"project-config/apply\"' if needed."
 
 # Production deployment
 prod-up:

@@ -10,3 +10,4 @@ scope:
   - 'nestedentryfields.97c36746-feb8-4bc1-8b32-3e3c3259b31b:read' # Blocchi
   - 'volumes.f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4:read' # Immagini
   - 'volumes.c0c8eabb-1d94-449c-b621-1252e3e75ea4:read' # Video
+  - 'globalsets.85074937-dff7-4c16-9d2c-0c76875fea4a:read' # Orari Settimanali

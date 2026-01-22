@@ -16,6 +16,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 595345f1-a17e-4be3-ba5a-8f68332aebb5 # Visita
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

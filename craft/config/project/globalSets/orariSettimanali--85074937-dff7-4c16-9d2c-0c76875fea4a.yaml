@@ -1,0 +1,47 @@
+fieldLayouts:
+  1059e71f-e91e-4765-895c-3ce6871615f0:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-22T10:31:17+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 0e998ccf-b819-41f0-88c2-01bfa99e19e2 # Orari
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a211aabe-547c-446e-9ab1-7775fd3fa616
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-22T10:31:17+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3673fc41-a579-4121-81bd-d598f59eca0a # Orario Ultimo Ingresso
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 42119478-8531-4043-b8e4-cb408a6b35eb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 643c166d-8a1d-4a15-95f0-612955c5f587
+        userCondition: null
+handle: orariSettimanali
+name: 'Orari Settimanali'
+sortOrder: 1
