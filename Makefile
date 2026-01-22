@@ -58,14 +58,18 @@ craft:
 fix-permissions:
 	@echo "Fixing permissions..."
 	docker compose exec -u root php mkdir -p /var/www/html/vendor
+	docker compose exec -u root php mkdir -p /var/www/html/storage
 	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
 	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
 	@echo "Permissions fixed!"
 
 # Fresh installation (creates empty database - use for new projects)
-install: fix-permissions
+install:
 	@echo "Installing Composer dependencies..."
-	docker compose exec php composer install
+	docker compose exec -u root php composer install --no-interaction
+	@echo "Fixing permissions..."
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage || true
 	@echo ""
 	@echo "Running Craft setup..."
 	docker compose exec php php craft setup/security-key
@@ -87,13 +91,12 @@ setup:
 	@echo "3. Waiting for database to be ready..."
 	sleep 15
 	@echo ""
-	@echo "4. Fixing permissions..."
-	docker compose exec -u root php mkdir -p /var/www/html/vendor
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
+	@echo "4. Installing Composer dependencies..."
+	docker compose exec -u root php composer install --no-interaction
 	@echo ""
-	@echo "5. Installing Composer dependencies..."
-	docker compose exec php composer install
+	@echo "5. Fixing permissions..."
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
+	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage || true
 	@echo ""
 	@echo "6. Generating security key..."
 	docker compose exec php php craft setup/security-key
