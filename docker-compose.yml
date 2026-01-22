@@ -20,8 +20,8 @@ services:
       context: ./docker/nginx
       dockerfile: Dockerfile
     container_name: craft-nginx
-    ports:
-      - "${APP_PORT:-8080}:80"
+    expose:
+      - "80"
     volumes:
       - ./craft:/var/www/html:ro
     depends_on:

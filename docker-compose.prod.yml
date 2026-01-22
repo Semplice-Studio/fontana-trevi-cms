@@ -12,8 +12,6 @@ services:
 
   nginx:
     restart: unless-stopped
-    ports:
-      - "80:80"
     deploy:
       resources:
         limits:
