@@ -1,4 +1,4 @@
-.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed fix-permissions
+.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed fix-permissions security-key
 
 # Default target
 help:
@@ -19,6 +19,7 @@ help:
 	@echo "  make db-export - Export database to seed.sql (for sharing)"
 	@echo "  make db-seed   - Import seed.sql (for new developers)"
 	@echo "  make fix-permissions - Fix vendor folder permissions"
+	@echo "  make security-key    - Generate Craft security key"
 	@echo ""
 
 # Docker commands
@@ -54,25 +55,35 @@ composer:
 craft:
 	docker compose exec php php craft $(c)
 
-# Fix permissions for vendor folder (needed on some Linux servers)
+# Fix permissions for Craft folders (needed on Linux servers)
 fix-permissions:
-	@echo "Fixing permissions..."
-	docker compose exec -u root php mkdir -p /var/www/html/vendor
-	docker compose exec -u root php mkdir -p /var/www/html/storage
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage
+	@echo "Creating required directories..."
+	mkdir -p craft/vendor craft/storage craft/web/cpresources
+	@echo "Fixing permissions (may require sudo password)..."
+	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources
+	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources
 	@echo "Permissions fixed!"
+
+# Generate Craft security key (needed on Linux servers where permissions block the craft command)
+security-key:
+	@echo "Generating security key..."
+	@KEY=$$(openssl rand -base64 32) && \
+	sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env && \
+	echo "Security key generated and saved to craft/.env"
 
 # Fresh installation (creates empty database - use for new projects)
 install:
+	@echo "Creating required directories..."
+	mkdir -p craft/vendor craft/storage craft/web/cpresources
+	@echo "Fixing permissions..."
+	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources || true
+	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources || true
 	@echo "Installing Composer dependencies..."
 	docker compose exec -u root php composer install --no-interaction
-	@echo "Fixing permissions..."
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage || true
+	@echo "Generating security key..."
+	@KEY=$$(openssl rand -base64 32) && sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env
 	@echo ""
-	@echo "Running Craft setup..."
-	docker compose exec php php craft setup/security-key
+	@echo "Running Craft install..."
 	docker compose exec php php craft install
 	@echo ""
 	@echo "Installation complete! Access the admin at http://localhost:8080/admin"
@@ -91,15 +102,16 @@ setup:
 	@echo "3. Waiting for database to be ready..."
 	sleep 15
 	@echo ""
-	@echo "4. Installing Composer dependencies..."
+	@echo "4. Creating required directories and fixing permissions..."
+	mkdir -p craft/vendor craft/storage craft/web/cpresources
+	sudo chown -R 33:33 craft/vendor craft/storage craft/web/cpresources || true
+	sudo chmod -R 775 craft/vendor craft/storage craft/web/cpresources || true
+	@echo ""
+	@echo "5. Installing Composer dependencies..."
 	docker compose exec -u root php composer install --no-interaction
 	@echo ""
-	@echo "5. Fixing permissions..."
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/vendor
-	docker compose exec -u root php chown -R www-data:www-data /var/www/html/storage || true
-	@echo ""
 	@echo "6. Generating security key..."
-	docker compose exec php php craft setup/security-key
+	@KEY=$$(openssl rand -base64 32) && sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env
 	@echo ""
 	@echo "7. Importing seed database..."
 	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
