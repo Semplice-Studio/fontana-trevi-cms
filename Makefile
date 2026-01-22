@@ -53,7 +53,7 @@ composer:
 craft:
 	docker compose exec php php craft $(c)
 
-# Fresh installation
+# Fresh installation (creates empty database - use for new projects)
 install:
 	@echo "Installing Composer dependencies..."
 	docker compose exec php composer install
@@ -64,15 +64,37 @@ install:
 	@echo ""
 	@echo "Installation complete! Access the admin at http://localhost:8080/admin"
 
-# Initial setup (first time only)
+# Initial setup with seed data (recommended for new developers)
 setup:
-	@echo "Setting up project..."
+	@echo "=== Fontana Trevi CMS Setup ==="
+	@echo ""
+	@echo "1. Copying environment files..."
 	cp -n .env.example .env || true
 	cp -n craft/.env.example craft/.env || true
+	@echo ""
+	@echo "2. Starting Docker containers..."
 	docker compose up -d --build
-	@echo "Waiting for database..."
-	sleep 10
-	$(MAKE) install
+	@echo ""
+	@echo "3. Waiting for database to be ready..."
+	sleep 15
+	@echo ""
+	@echo "4. Installing Composer dependencies..."
+	docker compose exec php composer install
+	@echo ""
+	@echo "5. Generating security key..."
+	docker compose exec php php craft setup/security-key
+	@echo ""
+	@echo "6. Importing seed database..."
+	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
+	@echo ""
+	@echo "7. Applying project config..."
+	docker compose exec php php craft project-config/apply --force
+	@echo ""
+	@echo "=== Setup Complete! ==="
+	@echo ""
+	@echo "Access the admin panel at: http://localhost:8080/admin"
+	@echo "Login: admin / admin123"
+	@echo ""
 
 # Database backup
 backup:

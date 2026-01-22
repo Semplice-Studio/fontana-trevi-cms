@@ -9,35 +9,21 @@ Headless Craft CMS 5 backend providing GraphQL API for the Nuxt frontend.
 
 ## Quick Start
 
-### macOS / Linux
+### macOS / Linux (One Command)
 
 ```bash
-# 1. Clone the repository
+# Clone and setup everything automatically
 git clone <repository-url>
 cd fontana-trevi-cms
-
-# 2. Copy environment files
-cp .env.example .env
-cp craft/.env.example craft/.env
-
-# 3. Start Docker containers
-docker compose up -d --build
-
-# 4. Wait for MySQL to be ready (~30 seconds), then install dependencies
-docker compose exec php composer install
-
-# 5. Generate security key
-docker compose exec php php craft setup/security-key
-
-# 6. Import the seed database (includes content and admin user)
-docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
-
-# 7. Apply the CMS configuration (syncs project config)
-docker compose exec php php craft project-config/apply
-
-# 8. Access the admin panel
-open http://localhost:8080/admin
+make setup
 ```
+
+This will:
+1. Copy environment files
+2. Start Docker containers
+3. Install dependencies
+4. Import seed database (with content and admin user)
+5. Apply CMS configuration
 
 ### Windows (PowerShell)
 
