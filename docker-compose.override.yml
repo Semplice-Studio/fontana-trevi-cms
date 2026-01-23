@@ -1,0 +1,11 @@
+# Development overrides - automatically loaded by Docker Compose
+# This file maps ports to localhost for local development
+
+services:
+  nginx:
+    ports:
+      - "8080:80"
+  
+  db:
+    ports:
+      - "3306:3306"
