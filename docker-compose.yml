@@ -27,7 +27,9 @@ services:
       - craft-network
 
   db:
-    image: mysql:8.0
+    build:
+      context: .
+      dockerfile: docker/db/Dockerfile
     container_name: craft-db
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
