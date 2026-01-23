@@ -1,4 +1,4 @@
-dateModified: 1769178158
+dateModified: 1769185256
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
@@ -21,6 +21,7 @@ meta:
     4cb11d72-0266-4f9f-802d-c3475bfa5825: FAQ # FAQ
     5a26f1f1-6170-408e-8b45-bcbf7104e0cb: Hero # Hero
     5cdd6615-0e0c-4415-bc3f-302dc52b1104: Homepage # Homepage
+    6b86bf72-f0da-4653-b9fa-e32ee61e5a6f: Storia # Storia
     7a220bd6-7d45-4cd3-9d88-7f3e583ed063: 'Link CTA' # Link CTA
     8f7f8686-4145-4205-ace1-e67e6e7f91f5: 'Fontana Trevi - IT' # Fontana Trevi - IT
     9c5d5f1c-302b-432d-8889-3965d508b194: fonta-trevi # fonta-trevi
@@ -32,6 +33,7 @@ meta:
     45952d02-8da9-45dc-81df-be4fea47ce47: Homepage # Homepage
     68308c87-e785-41d2-b15b-58aefafa2c8f: 'Seo Image' # Seo Image
     85867d07-76c5-49c6-b699-3f42a9ad4cc8: 'Seo Title' # Seo Title
+    97222eb3-1e43-486d-b4b7-bb82d1ed0c41: 'Lista Immagini' # Lista Immagini
     595345f1-a17e-4be3-ba5a-8f68332aebb5: Visita # Visita
     46188251-46ab-4519-916a-28b77f5aabbe: Sottotitolo # Sottotitolo
     85074937-dff7-4c16-9d2c-0c76875fea4a: 'Orari Settimanali' # Orari Settimanali

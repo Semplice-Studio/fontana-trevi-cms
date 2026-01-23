@@ -1,0 +1,110 @@
+color: null
+description: null
+fieldLayouts:
+  df884a95-2f9a-46e8-816b-0834bc3443b8:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:bebce23a-0c91-48bf-8d10-1b88344fe02a'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-23T16:18:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Titolo
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bebce23a-0c91-48bf-8d10-1b88344fe02a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T16:18:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 46188251-46ab-4519-916a-28b77f5aabbe # Sottotitolo
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28f5ac77-d497-4208-a2a6-fe325d1117ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T16:18:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7a220bd6-7d45-4cd3-9d88-7f3e583ed063 # Link CTA
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69779b94-0ba0-4bb1-bee0-4cfd598570ed
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T16:18:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 46188251-46ab-4519-916a-28b77f5aabbe # Sottotitolo
+            handle: descrizioneCTA
+            includeInCards: false
+            instructions: null
+            label: 'Descrizione CTA'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6162870f-ac91-4993-bd51-28c3eb5f6224
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T16:18:39+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 97222eb3-1e43-486d-b4b7-bb82d1ed0c41 # Lista Immagini
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3878e712-a1fb-4406-9907-5c745d251ee9
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 96901437-f29f-40bd-b0e5-ba44de643b78
+        userCondition: null
+handle: storia
+hasTitleField: false
+icon: null
+name: Storia
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

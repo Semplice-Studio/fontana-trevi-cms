@@ -48,6 +48,14 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 6b86bf72-f0da-4653-b9fa-e32ee61e5a6f # Storia
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null
