@@ -41,9 +41,6 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 # PHP configuration for Craft CMS
 COPY docker/php/php.ini /usr/local/etc/php/conf.d/craft.ini
 
-# Copy entrypoint script
-COPY docker/php/entrypoint.sh /usr/local/bin/entrypoint.sh
-
 # Set working directory
 WORKDIR /var/www/html
 
@@ -61,11 +58,10 @@ RUN mkdir -p /var/www/html/storage \
 RUN addgroup -g 1000 craft && adduser -u 1000 -G craft -s /bin/bash -D craft \
     && chown -R craft:craft /var/www/html \
     && chmod -R 775 /var/www/html/storage \
-    && chmod -R 775 /var/www/html/web/cpresources \
-    && chmod +x /usr/local/bin/entrypoint.sh
+    && chmod -R 775 /var/www/html/web/cpresources
 
 USER craft
 
 EXPOSE 9000
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["php-fpm"]
