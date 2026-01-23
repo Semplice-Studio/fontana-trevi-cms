@@ -47,6 +47,9 @@ WORKDIR /var/www/html
 # Copy application code
 COPY craft/ /var/www/html/
 
+# Copy seed file for manual import
+COPY database/seed.sql /var/www/html/seed.sql
+
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
