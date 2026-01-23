@@ -53,10 +53,6 @@ COPY database/seed.sql /var/www/html/seed.sql
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-RUN mysql -h db -u craft -pcraft craft < /var/www/html/seed.sql
-
-RUN php craft project-config/apply --force
-
 # Create required directories (excluded from git)
 RUN mkdir -p /var/www/html/storage \
     && mkdir -p /var/www/html/web/cpresources
