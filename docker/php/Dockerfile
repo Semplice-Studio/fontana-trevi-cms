@@ -50,6 +50,10 @@ COPY craft/ /var/www/html/
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
+# Create required directories (excluded from git)
+RUN mkdir -p /var/www/html/storage \
+    && mkdir -p /var/www/html/web/cpresources
+
 # Create craft user and set permissions
 RUN addgroup -g 1000 craft && adduser -u 1000 -G craft -s /bin/bash -D craft \
     && chown -R craft:craft /var/www/html \
