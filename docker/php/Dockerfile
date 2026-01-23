@@ -39,16 +39,26 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 # PHP configuration for Craft CMS
-COPY php.ini /usr/local/etc/php/conf.d/craft.ini
-
-# Create application user
-RUN addgroup -g 1000 craft && adduser -u 1000 -G craft -s /bin/bash -D craft
+COPY docker/php/php.ini /usr/local/etc/php/conf.d/craft.ini
 
 # Set working directory
 WORKDIR /var/www/html
 
-# Set proper permissions
-RUN chown -R craft:craft /var/www/html
+# Copy application code
+COPY craft/ /var/www/html/
+
+# Install dependencies
+RUN composer install --no-dev --optimize-autoloader --no-interaction
+
+# Create required directories (excluded from git)
+RUN mkdir -p /var/www/html/storage \
+    && mkdir -p /var/www/html/web/cpresources
+
+# Create craft user and set permissions
+RUN addgroup -g 1000 craft && adduser -u 1000 -G craft -s /bin/bash -D craft \
+    && chown -R craft:craft /var/www/html \
+    && chmod -R 775 /var/www/html/storage \
+    && chmod -R 775 /var/www/html/web/cpresources
 
 USER craft
 

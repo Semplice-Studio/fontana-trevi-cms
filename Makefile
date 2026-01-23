@@ -68,7 +68,11 @@ fix-permissions:
 security-key:
 	@echo "Generating security key..."
 	@KEY=$$(openssl rand -base64 32) && \
-	sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env && \
+	if [ "$$(uname)" = "Darwin" ]; then \
+		sed -i '' "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	else \
+		sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	fi && \
 	echo "Security key generated and saved to craft/.env"
 
 # Fresh installation (creates empty database - use for new projects)
@@ -81,7 +85,12 @@ install:
 	@echo "Installing Composer dependencies..."
 	docker compose exec -u root php composer install --no-interaction
 	@echo "Generating security key..."
-	@KEY=$$(openssl rand -base64 32) && sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env
+	@KEY=$$(openssl rand -base64 32) && \
+	if [ "$$(uname)" = "Darwin" ]; then \
+		sed -i '' "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	else \
+		sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	fi
 	@echo ""
 	@echo "Running Craft install..."
 	docker compose exec php php craft install
@@ -111,7 +120,12 @@ setup:
 	docker compose exec -u root php composer install --no-interaction
 	@echo ""
 	@echo "6. Generating security key..."
-	@KEY=$$(openssl rand -base64 32) && sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env
+	@KEY=$$(openssl rand -base64 32) && \
+	if [ "$$(uname)" = "Darwin" ]; then \
+		sed -i '' "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	else \
+		sed -i "s|^CRAFT_SECURITY_KEY=.*|CRAFT_SECURITY_KEY=$$KEY|" craft/.env; \
+	fi
 	@echo ""
 	@echo "7. Importing seed database..."
 	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
