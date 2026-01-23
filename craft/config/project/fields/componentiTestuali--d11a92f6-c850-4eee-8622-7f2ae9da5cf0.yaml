@@ -1,0 +1,37 @@
+columnSuffix: null
+handle: componentiTestuali
+instructions: null
+name: 'Componenti Testuali'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 24b9afcb-c85d-4015-a804-af42abb4cd06 # Scheda Orari Automatica
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 0497b5ae-f8b1-4170-8154-6e11b73312fe # Lista Metodi di Pagamento
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

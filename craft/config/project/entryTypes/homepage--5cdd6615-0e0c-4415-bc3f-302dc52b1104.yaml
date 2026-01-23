@@ -57,6 +57,63 @@ fieldLayouts:
         name: Content
         uid: 8e7da487-67eb-4dea-ba73-e13d550187ef
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-23T19:05:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 85867d07-76c5-49c6-b699-3f42a9ad4cc8 # Seo Title
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c3c085e-9a70-4d03-b063-f5a16e2e53a3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T19:05:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 3e7c6349-ae7b-4066-bcb6-380ea09b4f86 # Seo Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc5b2f30-2492-4537-a77a-6296a4b05a18
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T19:05:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 68308c87-e785-41d2-b15b-58aefafa2c8f # Seo Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 166544e2-d791-4908-8c88-3155a6ee263f
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: 51778d53-4e0f-416e-b3a0-ab7fd3ecf6ac
+        userCondition: null
 handle: homepage
 hasTitleField: true
 icon: house

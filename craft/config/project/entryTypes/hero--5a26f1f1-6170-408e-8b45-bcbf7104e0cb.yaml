@@ -13,6 +13,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-01-23T17:42:01+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: anchorSezione
+            includeInCards: false
+            instructions: null
+            label: 'Anchor Sezione'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa872ed6-0436-446b-b930-0ba6f3c5f684
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-01-21T14:25:31+00:00'
             editCondition: null
             elementCondition: null
@@ -94,40 +111,6 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 6a7056b8-5a93-4e11-b979-ddca12bf63ad
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-01-21T15:47:11+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: ff59314d-d88c-469c-bb11-d18989180be0 # Icona Avviso Manutenzione
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6f85adcd-9983-4bdd-83b4-b40299697ec5
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2026-01-21T15:47:11+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: de834319-7a42-478c-9f63-192de7436f20 # Testo Avviso Manutenzione
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cb0fb487-6cd3-42cf-acdd-fd5fc50078c1
             userCondition: null
             warning: null
             width: 100

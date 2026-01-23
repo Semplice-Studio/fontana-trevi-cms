@@ -13,8 +13,8 @@ settings:
   defaultUploadLocationSource: 'volume:f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4' # Immagini
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 1
   previewMode: full
   restrictFiles: false
   restrictLocation: true
@@ -24,7 +24,7 @@ settings:
   selectionLabel: null
   showCardsInGrid: false
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
@@ -32,5 +32,5 @@ settings:
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\fields\Assets

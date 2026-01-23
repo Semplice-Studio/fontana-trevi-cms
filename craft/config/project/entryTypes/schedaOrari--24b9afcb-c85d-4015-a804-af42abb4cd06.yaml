@@ -1,0 +1,13 @@
+color: null
+description: null
+handle: schedaOrari
+hasTitleField: false
+icon: null
+name: 'Scheda Orari Automatica'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -45,6 +45,23 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2026-01-23T18:34:47+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: d11a92f6-c850-4eee-8622-7f2ae9da5cf0 # Componenti Testuali
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e9f918a-48c8-40b1-92f1-d066afef2741
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-01-23T09:01:59+00:00'
             editCondition: null
             elementCondition: null

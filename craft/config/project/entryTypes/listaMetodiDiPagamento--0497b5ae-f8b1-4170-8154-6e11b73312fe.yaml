@@ -1,0 +1,13 @@
+color: null
+description: null
+handle: listaMetodiDiPagamento
+hasTitleField: false
+icon: null
+name: 'Lista Metodi di Pagamento'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

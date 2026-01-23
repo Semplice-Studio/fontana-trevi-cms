@@ -8,6 +8,23 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-01-23T17:43:59+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: anchorSezione
+            includeInCards: false
+            instructions: null
+            label: 'Anchor Sezione'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41ddc53c-6245-44f1-a8af-df9e17c466db
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2026-01-23T14:03:49+00:00'
             editCondition: null
             elementCondition: null

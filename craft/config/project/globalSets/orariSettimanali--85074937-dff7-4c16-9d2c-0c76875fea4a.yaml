@@ -39,6 +39,40 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-01-23T16:55:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: ff59314d-d88c-469c-bb11-d18989180be0 # Icona Avviso Manutenzione
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 000b2bb9-a1a0-4bde-8642-00a57618929b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T16:55:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: de834319-7a42-478c-9f63-192de7436f20 # Testo Avviso Manutenzione
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2fd04f3c-a09a-4f83-8f91-a8090efec113
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 643c166d-8a1d-4a15-95f0-612955c5f587
         userCondition: null
