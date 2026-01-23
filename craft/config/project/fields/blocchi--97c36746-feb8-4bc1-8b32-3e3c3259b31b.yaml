@@ -24,6 +24,30 @@ settings:
         -
           - group
           - General
+    -
+      __assoc__:
+        -
+          - uid
+          - a3863fb4-135a-49f3-ae23-44953b9accbd # Accesso
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 4cb11d72-0266-4f9f-802d-c3475bfa5825 # FAQ
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 26bfffe4-8789-4b00-9205-cd260b179905 # Come Raggiungerci
+        -
+          - group
+          - General
   includeTableView: false
   maxEntries: null
   minEntries: null

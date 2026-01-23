@@ -1,4 +1,4 @@
-dateModified: 1769099071
+dateModified: 1769178158
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
@@ -13,15 +13,18 @@ fs:
     url: '@web/uploads'
 meta:
   __names__:
+    0ac1c7a2-d9b0-4ec2-90a5-fe7721ba4871: Accordion # Accordion
     0e998ccf-b819-41f0-88c2-01bfa99e19e2: Orari # Orari
     2fbf1bea-4c0f-4faf-b4df-d7c7faf27656: 'Video Background' # Video Background
     3a97014c-fc28-4af7-b816-5428f37b05c5: Simple # Simple
     3e7c6349-ae7b-4066-bcb6-380ea09b4f86: 'Seo Description' # Seo Description
+    4cb11d72-0266-4f9f-802d-c3475bfa5825: FAQ # FAQ
     5a26f1f1-6170-408e-8b45-bcbf7104e0cb: Hero # Hero
     5cdd6615-0e0c-4415-bc3f-302dc52b1104: Homepage # Homepage
     7a220bd6-7d45-4cd3-9d88-7f3e583ed063: 'Link CTA' # Link CTA
     8f7f8686-4145-4205-ace1-e67e6e7f91f5: 'Fontana Trevi - IT' # Fontana Trevi - IT
     9c5d5f1c-302b-432d-8889-3965d508b194: fonta-trevi # fonta-trevi
+    26bfffe4-8789-4b00-9205-cd260b179905: 'Come Raggiungerci' # Come Raggiungerci
     53fb3da5-7c03-494f-bf94-ae71f1ac40d0: 'Blocco di Testo' # Blocco di Testo
     97c36746-feb8-4bc1-8b32-3e3c3259b31b: Blocchi # Blocchi
     3673fc41-a579-4121-81bd-d598f59eca0a: 'Orario Ultimo Ingresso' # Orario Ultimo Ingresso
@@ -32,8 +35,11 @@ meta:
     595345f1-a17e-4be3-ba5a-8f68332aebb5: Visita # Visita
     46188251-46ab-4519-916a-28b77f5aabbe: Sottotitolo # Sottotitolo
     85074937-dff7-4c16-9d2c-0c76875fea4a: 'Orari Settimanali' # Orari Settimanali
+    a3863fb4-135a-49f3-ae23-44953b9accbd: Accesso # Accesso
+    ac4b2e80-4dbb-4a27-9fc5-9cb0a651a925: 'Lista Info' # Lista Info
     aeb11d3b-b8f3-4a5a-b89e-309cead42890: 'Titolo Prima Riga' # Titolo Prima Riga
     c0c8eabb-1d94-449c-b621-1252e3e75ea4: Video # Video
+    c16b2bdf-ca6d-44c6-ad1b-a1dc706a0368: Switch # Switch
     de834319-7a42-478c-9f63-192de7436f20: 'Testo Avviso Manutenzione' # Testo Avviso Manutenzione
     e10b9023-318a-4ed3-98ca-c905871af2b4: 'Sottotitolo Seconda Riga' # Sottotitolo Seconda Riga
     f91a0c15-40da-4ab6-a7d1-1f0dd212eaf4: Immagini # Immagini
@@ -44,6 +50,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 4.0.0
 sites:
   8f7f8686-4145-4205-ace1-e67e6e7f91f5: # Fontana Trevi - IT
     baseUrl: $PRIMARY_SITE_URL

@@ -1,0 +1,77 @@
+color: null
+description: null
+fieldLayouts:
+  55cdd261-47da-4b50-8f0d-e4a5d74c0aa7:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:583e4528-253a-49b4-8bc8-fcf8e3b5b97c'
+      - 'layoutElement:178cb144-75a4-4ec7-8ff8-b1aebb236b2a'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-23T08:51:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Titolo
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 583e4528-253a-49b4-8bc8-fcf8e3b5b97c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T08:51:48+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 53fb3da5-7c03-494f-bf94-ae71f1ac40d0 # Blocco di Testo
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 178cb144-75a4-4ec7-8ff8-b1aebb236b2a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T09:01:59+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: c16b2bdf-ca6d-44c6-ad1b-a1dc706a0368 # Switch
+            handle: collassabile
+            includeInCards: true
+            instructions: null
+            label: Collassabile
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b1660981-c27c-43ea-beb9-c0d158ecedbf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: acc1981b-e110-4c68-bcc5-927504985dce
+        userCondition: null
+handle: accordion
+hasTitleField: false
+icon: null
+name: Accordion
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

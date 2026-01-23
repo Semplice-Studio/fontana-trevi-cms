@@ -1,0 +1,111 @@
+color: null
+description: null
+fieldLayouts:
+  28865409-8d10-43f4-b02b-974ddbd33870:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:ea0e9734-e321-41b5-a238-cfda14ef1495'
+      - 'layoutElement:16a2ecaa-edfd-4aa8-b125-906d04fb3fb9'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-01-23T08:47:28+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: aeb11d3b-b8f3-4a5a-b89e-309cead42890 # Titolo Prima Riga
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Titolo
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ea0e9734-e321-41b5-a238-cfda14ef1495
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T08:47:28+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 46188251-46ab-4519-916a-28b77f5aabbe # Sottotitolo
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 16a2ecaa-edfd-4aa8-b125-906d04fb3fb9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T08:22:49+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: ac4b2e80-4dbb-4a27-9fc5-9cb0a651a925 # Lista Info
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 58689691-2514-4290-9e6b-78c0a104ed12
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T09:13:40+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 7a220bd6-7d45-4cd3-9d88-7f3e583ed063 # Link CTA
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e19d53cc-8756-40dc-b9bc-478295f5d7f9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-01-23T09:15:21+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 46188251-46ab-4519-916a-28b77f5aabbe # Sottotitolo
+            handle: sottotitoloCta
+            includeInCards: false
+            instructions: null
+            label: 'Sottotitolo CTA'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e8f09ef2-465a-441c-82da-1c62d10a493b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1fbd6445-daaf-417d-9cd2-713f9e005672
+        userCondition: null
+handle: accesso
+hasTitleField: false
+icon: null
+name: Accesso
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

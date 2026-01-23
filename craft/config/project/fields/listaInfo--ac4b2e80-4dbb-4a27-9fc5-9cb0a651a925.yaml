@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: listaInfo
+instructions: null
+name: 'Lista Info'
+searchable: false
+settings:
+  createButtonLabel: Aggiungi
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 0ac1c7a2-d9b0-4ec2-90a5-fe7721ba4871 # Accordion
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

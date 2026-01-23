@@ -134,7 +134,7 @@ backup:
 # Export database to seed file (run this to update the shared seed)
 db-export:
 	@echo "Exporting database to database/seed.sql..."
-	docker compose exec db mysqldump -u craft -pcraft --routines --triggers craft > database/seed.sql
+	docker compose exec db mysqldump -u craft -pcraft --routines --triggers --no-tablespaces craft > database/seed.sql
 	@echo "Database exported! Commit database/seed.sql to share with team."
 
 # Import seed database (for new developers)
