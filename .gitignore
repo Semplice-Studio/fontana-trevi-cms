@@ -8,6 +8,8 @@ craft/vendor/
 craft/storage/
 craft/.env
 craft/web/cpresources/
+craft/web/uploads/*
+!craft/web/uploads/.gitkeep
 
 # Composer
 composer.phar
@@ -26,3 +28,9 @@ Thumbs.db
 
 # Docker volumes (if using bind mounts)
 mysql-data/
+
+# Backups (too large for git)
+backups/
+
+# Assets archive (too large for git)
+database/assets.tar.gz

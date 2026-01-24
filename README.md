@@ -24,6 +24,7 @@ This will:
 3. Install dependencies
 4. Import seed database (with content and admin user)
 5. Apply CMS configuration
+6. **(Optional)** Import assets if available: `make assets-seed`
 
 ### Windows (PowerShell)
 
@@ -114,7 +115,7 @@ docker compose exec db mysql -u craft -pcraft craft
 docker compose exec php php craft users/set-password admin@example.com --password=newpassword
 ```
 
-### Database Seed
+### Database & Assets Seed
 
 The repository includes a database seed (`database/seed.sql`) with:
 - Admin user (admin / admin123)
@@ -146,6 +147,28 @@ make db-export
 ```
 
 > Remember to commit `database/seed.sql` after updating it!
+
+**Import assets** (new developers):
+
+```bash
+# macOS/Linux
+make assets-seed
+
+# Or manually
+tar -xzf database/assets.tar.gz -C craft/web
+```
+
+**Export/Update assets** (after adding new images/videos):
+
+```bash
+# macOS/Linux
+make assets-export
+
+# Or manually
+tar -czf database/assets.tar.gz -C craft/web uploads/
+```
+
+> Remember to share `database/assets.tar.gz` with the team (via cloud storage, not git)!
 
 ### URLs
 

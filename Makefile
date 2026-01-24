@@ -1,4 +1,4 @@
-.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed fix-permissions security-key
+.PHONY: help up down build rebuild logs shell db-shell composer craft install setup backup db-export db-seed assets-export assets-seed assets-backup fix-permissions security-key
 
 # Default target
 help:
@@ -18,6 +18,9 @@ help:
 	@echo "  make backup    - Backup database with timestamp"
 	@echo "  make db-export - Export database to seed.sql (for sharing)"
 	@echo "  make db-seed   - Import seed.sql (for new developers)"
+	@echo "  make assets-export - Export assets to assets.tar.gz (for sharing)"
+	@echo "  make assets-seed   - Import assets.tar.gz (for new developers)"
+	@echo "  make assets-backup - Backup assets with timestamp"
 	@echo "  make fix-permissions - Fix vendor folder permissions"
 	@echo "  make security-key    - Generate Craft security key"
 	@echo ""
@@ -156,6 +159,28 @@ db-seed:
 	@echo "Importing seed database..."
 	docker compose exec -T db mysql -u craft -pcraft craft < database/seed.sql
 	@echo "Seed imported! Run 'make craft c=\"project-config/apply\"' if needed."
+
+# Export assets to archive (run this to update the shared assets)
+assets-export:
+	@echo "Exporting assets to database/assets.tar.gz..."
+	tar -czf database/assets.tar.gz -C craft/web uploads/
+	@echo "Assets exported! Share database/assets.tar.gz with the team."
+
+# Import assets from archive (for new developers)
+assets-seed:
+	@if [ ! -f database/assets.tar.gz ]; then \
+		echo "Error: database/assets.tar.gz not found!"; \
+		exit 1; \
+	fi
+	@echo "Importing assets from database/assets.tar.gz..."
+	tar -xzf database/assets.tar.gz -C craft/web
+	@echo "Assets imported successfully!"
+
+# Assets backup with timestamp
+assets-backup:
+	@mkdir -p backups
+	tar -czf backups/assets-$$(date +%Y%m%d-%H%M%S).tar.gz -C craft/web uploads/
+	@echo "Assets backup created in backups/"
 
 # Production deployment
 prod-up:
