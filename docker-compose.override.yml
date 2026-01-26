@@ -6,8 +6,8 @@ services:
     volumes:
       - ./craft:/var/www/html
       # Exclude vendor and storage from sync for better performance
-      - /var/www/html/vendor
-      - /var/www/html/storage
+      - vendor:/var/www/html/vendor
+      - storage:/var/www/html/storage
   
   nginx:
     ports:
@@ -18,3 +18,7 @@ services:
   db:
     ports:
       - "3306:3306"
+
+volumes:
+  vendor:
+  storage:
