@@ -93,6 +93,10 @@ make logs            # View logs
 make fix-permissions # Fix vendor/storage permissions (useful on Linux servers)
 ```
 
+### Volumes
+
+This project uses named volumes for `vendor` and `storage` to avoid anonymous volume buildup when containers are recreated. If you previously used anonymous volumes, you may see old ones in Docker Desktop; you can remove unused volumes with `docker volume prune`. Note: `docker compose down -v` also removes `db-data` and `uploads`.
+
 ### Common Tasks
 
 ```bash
