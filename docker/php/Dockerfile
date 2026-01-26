@@ -48,20 +48,22 @@ WORKDIR /var/www/html
 COPY craft/ /var/www/html/
 
 # Copy seed file for manual import
-COPY database/seed.sql /var/www/html/seed.sql
+# COPY database/seed.sql /var/www/html/seed.sql
 
 # Install dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
 # Create required directories (excluded from git)
 RUN mkdir -p /var/www/html/storage \
-    && mkdir -p /var/www/html/web/cpresources
+    && mkdir -p /var/www/html/web/cpresources \
+    && mkdir -p /var/www/html/web/uploads
 
 # Create craft user and set permissions
 RUN addgroup -g 1000 craft && adduser -u 1000 -G craft -s /bin/bash -D craft \
     && chown -R craft:craft /var/www/html \
     && chmod -R 775 /var/www/html/storage \
-    && chmod -R 775 /var/www/html/web/cpresources
+    && chmod -R 775 /var/www/html/web/cpresources \
+    && chmod -R 775 /var/www/html/web/uploads
 
 USER craft
 

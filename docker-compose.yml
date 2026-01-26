@@ -6,6 +6,7 @@ services:
     container_name: craft-php
     volumes:
       - php-logs:/var/log/php
+      - uploads:/var/www/html/web/uploads
     environment:
       - PHP_MEMORY_LIMIT=256M
     depends_on:
@@ -19,6 +20,8 @@ services:
       context: .
       dockerfile: docker/nginx/Dockerfile
     container_name: craft-nginx
+    volumes:
+      - uploads:/var/www/html/web/uploads
     expose:
       - "80"
     depends_on:
@@ -49,6 +52,7 @@ services:
 volumes:
   db-data:
   php-logs:
+  uploads:
 
 networks:
   craft-network:
