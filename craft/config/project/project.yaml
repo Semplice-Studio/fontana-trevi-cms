@@ -1,4 +1,4 @@
-dateModified: 1769596062
+dateModified: 1769608358
 email:
   fromEmail: andrea@semplice.is
   fromName: fonta-trevi
@@ -10,7 +10,7 @@ fs:
     settings:
       path: '@webroot/uploads'
     type: craft\fs\Local
-    url: '@web/uploads'
+    url: $NUXT_FRONTEND_URL/uploads
 meta:
   __names__:
     0ac1c7a2-d9b0-4ec2-90a5-fe7721ba4871: Accordion # Accordion
