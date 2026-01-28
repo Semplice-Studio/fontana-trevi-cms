@@ -42,17 +42,50 @@ services:
     volumes:
       - db-data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD:-root}"]
+      test:
+        [
+          "CMD",
+          "mysqladmin",
+          "ping",
+          "-h",
+          "localhost",
+          "-u",
+          "root",
+          "-p${DB_ROOT_PASSWORD:-root}",
+        ]
       interval: 5s
       timeout: 5s
       retries: 10
     networks:
       - craft-network
 
+  db-backup:
+    image: fradelg/mysql-cron-backup
+    container_name: craft-db-backup
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - db-backups:/backup
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_PORT=3306
+      - MYSQL_USER=${DB_USER:-craft}
+      - MYSQL_PASS=${DB_PASSWORD:-craft}
+      - MYSQL_DATABASE=${DB_DATABASE:-craft}
+      - CRON_TIME=0 2 * * *
+      - MAX_BACKUPS=14
+      - INIT_BACKUP=1
+      - GZIP_LEVEL=9
+    networks:
+      - craft-network
+    restart: unless-stopped
+
 volumes:
   db-data:
   php-logs:
   uploads:
+  db-backups:
 
 networks:
   craft-network:
