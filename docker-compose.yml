@@ -24,8 +24,6 @@ services:
       - uploads:/var/www/html/web/uploads
     expose:
       - "80"
-    ports:
-      - "8443:80"
     depends_on:
       - php
     networks:
